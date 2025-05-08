@@ -5,11 +5,10 @@
 </head>
 <body>
     <h1>Tässä on otsikko</h1>
-    <p>Ei onnistunut jostain kumman syystä heti alkuun, mutta toisella kerralla ei suurempia ongelmia. Vika lieni näppäimistön ja penkin välissä.
-    <br>
-    Eiköhän tämä tästä pikkuhiljaa ala sujumaan paremmin.</br>
-    </p>
+    <p>Fiksumpi ei jättäisi tekemisiään näin viime tippaan.</p>
+    <p>Eiköhän tämä tästä pikkuhiljaa ala sujumaan hieman paremmin.</p>
 
+    <div id="koira"></div>
 
     <script>
      
@@ -21,12 +20,12 @@
                 })
 
                 .then(function (json) {
-                    document.getElementById("vastaus").innerHTML = 
+                    document.getElementById("koira").innerHTML = 
                     "<img src='" + json.message + "' alt='koira' height='200'>";
                 })
 
                 .catch(function (error) {
-                    document.getElementById("vastaus").innerHTML = 
+                    document.getElementById("koira").innerHTML = 
                     "<p>Koiran haku ei onnistunut</p>";
                 })
         }
