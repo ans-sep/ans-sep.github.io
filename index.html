@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Otsikko</title>
+<title>Tehtävä</title>
 </head>
 <body>
-    <h1>My First Heading</h1>
-    <p>My First and last Paragraph</p>
+    <h1>Tässä on otsikko</h1>
+    <p>Ei onnistunut jostain kumman syystä heti alkuun, 
+        mutta toisella kerralla ei suurempia ongelmia.
+
+        Mutta eiköhän tämä tästä pikkuhiljaa ala sujumaan paremmin. 
+    </p>
+
+
+    <script>
+     
+        function dogi() {
+          
+            fetch("https://dog.ceo/api/breeds/image/random")
+                .then(function (response) {
+                    return response.json()
+                })
+
+                .then(function (json) {
+                    document.getElementById("vastaus").innerHTML = 
+                    "<img src='" + json.message + "' alt='koira' height='200'>";
+                })
+
+                .catch(function (error) {
+                    document.getElementById("vastaus").innerHTML = 
+                    "<p>Koiran haku ei onnistunut</p>";
+                })
+        }
+
+        dogi();
+    </script>
+
 </body>
 </html>
